@@ -7,11 +7,14 @@ const orderRoutes = require('./routes/orders');
 
 const app = express();
 
-// Middleware
+// CORS Middleware - FIXED (only once, with proper config)
 app.use(cors({
-    origin: ['http://localhost:5500', 'http://127.0.0.1:5500', '*'],
-    credentials: true
+    origin: '*',  // Allow all origins for Render/Vercel deployment
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Body parsing middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -23,19 +26,22 @@ mongoose.connect(process.env.MONGODB_URI)
         process.exit(1);
     });
 
-// Routes
-app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// ========== IMPORTANT: Routes - THIS WAS MISSING ==========
+// This line connects your API routes - WITHOUT THIS, you get 404 errors!
+app.use('/api/orders', orderRoutes);
+// ===========================================================
 
 // Test route
 app.get('/', (req, res) => {
     res.json({ message: 'SVS Boutique API is running!' });
 });
 
-// Error handling middleware
+// Test API route (to verify routing is working)
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'API test route is working!' });
+});
+
+// Error handling middleware (should be last)
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ success: false, message: 'Something went wrong!' });
