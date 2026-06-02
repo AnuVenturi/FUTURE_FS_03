@@ -1,0 +1,15 @@
+# Backend
+node_modules/
+.env
+package-lock.json
+
+# Frontend
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

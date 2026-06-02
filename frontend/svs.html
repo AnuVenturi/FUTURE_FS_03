@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVS Boutique - Custom Stitching & Embroidery | Bhimavaram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e7 50%, #fff0f3 100%);
+            color: #4a2c2c;
+            line-height: 1.6;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.3;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 20px rgba(212, 99, 124, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            color: #d4637c;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            font-size: 0.8rem;
+            color: #b5838d;
+            margin-top: 5px;
+        }
+
+        .nav a {
+            color: #5a3e3e;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            color: #d4637c;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255, 240, 245, 0.85), rgba(255, 220, 230, 0.85));
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            color: #d4637c;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: #5a3e3e;
+        }
+
+        .embroidery-text {
+            font-size: 1.2rem;
+            color: #d4637c;
+            background: rgba(255, 255, 255, 0.85);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            margin: 25px 0 20px 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(212, 99, 124, 0.15);
+            border: 1px solid #ffccd5;
+        }
+
+        .btn-container {
+            margin-top: 10px;
+        }
+
+        .btn {
+            background: #d4637c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #d4637c;
+            color: #d4637c;
+        }
+
+        .btn-outline:hover {
+            background: #d4637c;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #d4637c;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #d4637c;
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+
+        .about-box {
+            background: white;
+            border-radius: 25px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 20px rgba(212, 99, 124, 0.08);
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        .satisfaction-section {
+            background: linear-gradient(135deg, #fff0f3, #ffe4e9);
+            border-radius: 25px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(212, 99, 124, 0.08);
+        }
+
+        .satisfaction-title {
+            font-size: 1.8rem;
+            color: #d4637c;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+
+        .stars i {
+            margin: 0 2px;
+        }
+
+        .satisfaction-text {
+            font-size: 1.1rem;
+            color: #5a3e3e;
+            font-style: italic;
+            max-width: 700px;
+            margin: 1rem auto;
+            line-height: 1.7;
+        }
+
+        .happy-count {
+            background: #d4637c;
+            color: white;
+            display: inline-block;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.8rem 1.2rem;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(212, 99, 124, 0.08);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #d4637c;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            margin-bottom: 0.8rem;
+            color: #d4637c;
+        }
+
+        .feature-card p {
+            color: #7a5a5a;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .dress-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .dress-item {
+            background: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            color: #d4637c;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .dress-item:hover {
+            background: #d4637c;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .owner-box {
+            background: white;
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: 25px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(212, 99, 124, 0.08);
+        }
+
+        .owner-name {
+            font-size: 1.8rem;
+            color: #d4637c;
+            margin: 0.8rem 0;
+        }
+
+        .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #f09433, #d62976);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+            transition: 0.3s;
+        }
+
+        /* Contact Section */
+        .contact-info-section {
+            background: white;
+            border-radius: 25px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(212, 99, 124, 0.08);
+        }
+
+        .contact-caption {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #d4637c;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contact-single-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .contact-single-line .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 20px;
+            background: #fffaf7;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .contact-single-line .contact-item:hover {
+            background: #ffe0e7;
+            transform: translateY(-2px);
+        }
+
+        .contact-single-line .contact-item i {
+            width: 35px;
+            height: 35px;
+            background: #d4637c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .contact-single-line .contact-item span {
+            color: #4a2c2c;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Home Button Style */
+        .back-home-btn {
+            background: transparent;
+            border: 2px solid #d4637c;
+            color: #d4637c;
+            padding: 10px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .back-home-btn:hover {
+            background: #d4637c;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Form Styles */
+        .form-page {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(212, 99, 124, 0.2);
+            max-width: 600px;
+            width: 100%;
+            border: 1px solid #ffccd5;
+        }
+
+        .form-header {
+            background: linear-gradient(135deg, #d4637c, #e8899e);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .form-header i {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-body {
+            padding: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #d4637c;
+            font-size: 1rem;
+            z-index: 1;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid #ffccd5;
+            border-radius: 15px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: #fffaf7;
+            transition: 0.3s;
+        }
+
+        .outfit-group {
+            background: #fffaf7;
+            border: 1px solid #ffccd5;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .outfit-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #d4637c;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .checkbox-item:hover {
+            background: #ffe0e7;
+        }
+
+        .checkbox-item input {
+            width: 18px;
+            height: 18px;
+            accent-color: #d4637c;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: normal;
+            color: #4a2c2c;
+            font-size: 0.9rem;
+        }
+
+        .input-group textarea {
+            padding-top: 12px;
+            height: 90px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #d4637c, #e8899e);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 99, 124, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Admin Panel Styles - Vertical Layout */
+        .admin-panel {
+            min-height: 70vh;
+            padding: 2rem;
+        }
+
+        .orders-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .orders-box {
+            background: white;
+            border-radius: 25px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(212, 99, 124, 0.1);
+        }
+
+        .orders-box h3 {
+            color: #d4637c;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ffe0e7;
+            padding-bottom: 10px;
+        }
+
+        .order-count {
+            background: #d4637c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .order-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .order-item {
+            background: #fffaf7;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #d4637c;
+        }
+
+        .order-item p {
+            margin: 5px 0;
+            font-size: 0.85rem;
+        }
+
+        .order-item strong {
+            color: #d4637c;
+        }
+
+        .deliver-btn {
+            background: #28a745;
+            color: white;
+            padding: 6px 18px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .deliver-btn:hover {
+            background: #218838;
+        }
+
+        .logout-btn {
+            background: #dc3545;
+            color: white;
+            padding: 10px 28px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .credential-box {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            border: 1px dashed #d4637c;
+        }
+
+        .sample-photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .sample-img {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .sample-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(212, 99, 124, 0.3);
+        }
+
+        .img-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(212, 99, 124, 0.85);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .close-image-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .back-home-center {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        footer {
+            background: #d4637c;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .dress-page-container {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .embroidery-box {
+            background: linear-gradient(135deg, #fff0f3, #ffe4e9);
+            padding: 1rem;
+            border-radius: 15px;
+            margin: 1rem auto;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .form-message {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            .nav a {
+                margin: 0 1rem;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+            .sample-photos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+            .sample-img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">
+        <h1>SVS Boutique</h1>
+        <p>Custom Stitching & Embroidery | Bhimavaram</p>
+    </div>
+    <div class="nav">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('dresses')">Dresses</a>
+        <a onclick="showPage('samplephotos')">Sample Photos</a>
+        <a onclick="showPage('order')">Place Order</a>
+        <a onclick="showPage('adminlogin')">Admin</a>
+    </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="page active">
+    <div class="hero">
+        <div>
+            <h2>Custom Stitching & Embroidery Expert</h2>
+            <p>Quality Stitching | On-Time Delivery | Affordable Prices</p>
+            <div class="embroidery-text">✨ Professional Embroidery Work Available ✨</div>
+            <div class="btn-container">
+                <a onclick="showPage('dresses')" class="btn">👗 View Dresses</a>
+                <a onclick="showPage('samplephotos')" class="btn btn-outline">📸 Sample Photos</a>
+                <a onclick="showPage('order')" class="btn">📝 Place Order</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="about-box">
+            <h2 class="section-title">About SVS Boutique</h2>
+            <div class="about-text">
+                <p>✨ <strong>SVS Boutique</strong> is a trusted name for custom stitching, embroidery, and designer wear.</p>
+                <p>👗 We stitch <strong>Lehengas, Half Sarees, Long Frocks, Short Tops, Bridal Wear, Party Wear, Skirts, Short Frocks, Anarkali, Indo-Western, Modern Frocks</strong>, and any custom design.</p>
+                <p>🧵 We offer beautiful <strong>embroidery work</strong> including Zari, Zardosi, Mirror work, Thread work, and Stone work.</p>
+                <p>✂️ Led by <strong>Venturi Sunitha</strong>, every stitch is made with love and precision.</p>
+            </div>
+        </div>
+
+        <div class="satisfaction-section">
+            <div class="satisfaction-title"><i class="fas fa-heart"></i> Customer Satisfaction <i class="fas fa-smile-wink"></i></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="satisfaction-text">"Many customers are satisfied with our boutique and they felt extremely happy with our quality, timely delivery, and beautiful embroidery work."</div>
+            <div class="happy-count"><i class="fas fa-smile"></i> 500+ Happy Customers <i class="fas fa-heart"></i></div>
+        </div>
+
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature-card"><i class="fas fa-palette"></i><h4>Any Design</h4><p>Bring any picture or describe your dream outfit</p></div>
+            <div class="feature-card"><i class="fas fa-calendar-check"></i><h4>On-Time Delivery</h4><p>Guaranteed timely delivery</p></div>
+            <div class="feature-card"><i class="fas fa-magic"></i><h4>Neat Finishing</h4><p>Premium quality stitching</p></div>
+            <div class="feature-card"><i class="fas fa-rupee-sign"></i><h4>Affordable</h4><p>Best quality at reasonable rates</p></div>
+        </div>
+
+        <div class="owner-box">
+            <i class="fas fa-user-circle" style="font-size: 4rem; color: #d4637c;"></i>
+            <div class="owner-name">Venturi Sunitha</div>
+            <p>Your trusted designer with years of experience.</p>
+            <a href="https://www.instagram.com/sunitha" class="instagram-btn" target="_blank"><i class="fab fa-instagram"></i> Follow @sunitha</a>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="contact-info-section">
+            <div class="contact-caption"><i class="fas fa-address-card"></i> Contact Us <i class="fas fa-phone-alt"></i></div>
+            <div class="contact-single-line">
+                <div class="contact-item"><i class="fas fa-phone-alt"></i><span>+91 98765 43210</span></div>
+                <div class="contact-item"><i class="far fa-paper-plane"></i><span>venturisunitha@gmail.com</span></div>
+                <div class="contact-item"><i class="fab fa-instagram"></i><span>@sunitha</span></div>
+                <div class="contact-item"><i class="fas fa-location-dot"></i><span>Housing Board Colony, Bhimavaram</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DRESSES PAGE -->
+<div id="dressesPage" class="page">
+    <div class="container">
+        <div class="dress-page-container">
+            <h2 class="section-title">What We Stitch</h2>
+            <div class="embroidery-box">🧵 <strong>Embroidery available:</strong> Zari, Zardosi, Mirror work, Thread work, Stone work</div>
+            <div class="dress-items">
+                <div class="dress-item">👗 Lehengas</div><div class="dress-item">💃 Half Sarees</div>
+                <div class="dress-item">👘 Long Frocks</div><div class="dress-item">👚 Short Tops</div>
+                <div class="dress-item">💍 Bridal Wear</div><div class="dress-item">🎉 Party Wear</div>
+                <div class="dress-item">👗 Skirts</div><div class="dress-item">🌸 Short Frocks</div>
+                <div class="dress-item">👘 Anarkali</div><div class="dress-item">✨ Indo-Western</div>
+                <div class="dress-item">⭐ Modern Frocks</div><div class="dress-item">💎 Any Custom</div>
+            </div>
+            <div class="back-home-center"><button class="back-home-btn" onclick="showPage('home')">← Back to Home</button></div>
+        </div>
+    </div>
+</div>
+
+<!-- SAMPLE PHOTOS PAGE -->
+<div id="samplephotosPage" class="page">
+    <div class="container">
+        <h2 class="section-title">Sample Photos</h2>
+        <div class="sample-photos-grid" id="samplePhotosGrid"></div>
+        <div class="back-home-center"><button class="back-home-btn" onclick="showPage('home')">← Back to Home</button></div>
+    </div>
+</div>
+
+<!-- PLACE ORDER PAGE -->
+<div id="orderPage" class="page">
+    <div class="form-page">
+        <div class="form-card">
+            <div class="form-header"><i class="fas fa-shopping-cart"></i><h2>Place Your Order</h2><p>Fill the details below to confirm your order</p></div>
+            <div class="form-body">
+                <form id="orderForm">
+                    <div class="input-group"><i class="fas fa-user"></i><input type="text" id="orderName" placeholder="Your Full Name" required></div>
+                    <div class="input-group"><i class="far fa-paper-plane"></i><input type="email" id="orderEmail" placeholder="Email Address" required></div>
+                    <div class="input-group"><i class="fas fa-phone"></i><input type="tel" id="orderPhone" placeholder="Phone Number" required></div>
+                    
+                    <div class="outfit-group">
+                        <label><i class="fas fa-tshirt"></i> Select Outfit Type (Select multiple)</label>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-item"><input type="checkbox" value="Lehenga" id="outfit_lehenga"><label for="outfit_lehenga">👗 Lehenga</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Half Saree" id="outfit_halfsaree"><label for="outfit_halfsaree">💃 Half Saree</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Long Frock" id="outfit_longfrock"><label for="outfit_longfrock">👘 Long Frock</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Short Top" id="outfit_shorttop"><label for="outfit_shorttop">👚 Short Top</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Bridal Wear" id="outfit_bridal"><label for="outfit_bridal">💍 Bridal Wear</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Party Wear" id="outfit_party"><label for="outfit_party">🎉 Party Wear</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Skirt" id="outfit_skirt"><label for="outfit_skirt">👗 Skirt</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Short Frock" id="outfit_shortfrock"><label for="outfit_shortfrock">🌸 Short Frock</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Anarkali" id="outfit_anarkali"><label for="outfit_anarkali">👘 Anarkali</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Indo-Western" id="outfit_indowestern"><label for="outfit_indowestern">✨ Indo-Western</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Modern Frock" id="outfit_modernfrock"><label for="outfit_modernfrock">⭐ Modern Frock</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Embroidery Work" id="outfit_embroidery"><label for="outfit_embroidery">🧵 Embroidery Work</label></div>
+                            <div class="checkbox-item"><input type="checkbox" value="Custom Design" id="outfit_custom"><label for="outfit_custom">💎 Custom Design</label></div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group"><i class="fas fa-pen"></i><textarea id="orderDescription" placeholder="Additional details (color, fabric, measurements, etc.)"></textarea></div>
+                    <div class="input-group"><i class="fas fa-calendar-alt"></i><input type="date" id="deliveryDate" required></div>
+                    <button type="submit" class="submit-btn">📝 Place Order</button>
+                </form>
+                <div id="orderMessage" class="form-message"></div>
+                <div class="back-home-center"><button class="back-home-btn" onclick="showPage('home')">← Back to Home</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ADMIN LOGIN PAGE -->
+<div id="adminloginPage" class="page">
+    <div class="form-page">
+        <div class="form-card">
+            <div class="form-header"><i class="fas fa-lock"></i><h2>Admin Login</h2><p>Enter credentials to access orders</p></div>
+            <div class="form-body">
+                <div class="credential-box">
+                    <span>📧 Email:</span> admin@svsboutique.com &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span>🔑 Password:</span> admin123
+                </div>
+                <form id="loginForm">
+                    <div class="input-group"><i class="fas fa-envelope"></i><input type="email" id="adminEmail" placeholder="Admin Email" required></div>
+                    <div class="input-group"><i class="fas fa-key"></i><input type="password" id="adminPassword" placeholder="Password" required></div>
+                    <button type="submit" class="submit-btn">🔐 Login</button>
+                </form>
+                <div id="loginMessage" class="form-message"></div>
+                <div class="back-home-center"><button class="back-home-btn" onclick="showPage('home')">← Back to Home</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ADMIN PANEL PAGE -->
+<div id="adminpanelPage" class="page">
+    <div class="admin-panel">
+        <div class="container">
+            <h2 class="section-title">Admin Dashboard</h2>
+            
+            <div class="orders-vertical">
+                <div class="orders-box">
+                    <h3>📋 All Orders <span class="order-count" id="allCount">0</span></h3>
+                    <div class="order-list" id="allOrdersList"></div>
+                </div>
+                <div class="orders-box">
+                    <h3>⏳ Pending Orders <span class="order-count" id="pendingCount">0</span></h3>
+                    <div class="order-list" id="pendingOrdersList"></div>
+                </div>
+                <div class="orders-box">
+                    <h3>✅ Delivered Orders <span class="order-count" id="deliveredCount">0</span></h3>
+                    <div class="order-list" id="deliveredOrdersList"></div>
+                </div>
+            </div>
+            <div class="back-home-center">
+                <button onclick="adminLogout()" class="logout-btn">🚪 Logout</button>
+                <button class="back-home-btn" onclick="showPage('home')" style="margin-left: 1rem;">← Back to Home</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer><p>&copy; SVS Boutique | Bhimavaram</p></footer>
+
+<a href="https://wa.me/919876543210?text=Hi%20Sunitha!%20I%20saw%20your%20website.%20I'm%20interested%20in%20custom%20stitching%20and%20embroidery." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<div id="imageModal" class="image-modal"><span class="close-image-modal" onclick="closeImageModal()">&times;</span><img id="enlargedImage" src=""></div>
+
+<script>
+    // ============================================
+    // API CONFIGURATION - Change this to your backend URL
+    // ============================================
+    const API_URL = 'http://localhost:5000';
+
+    // Sample Photos
+    const samplePhotos = [
+    { url: "images/photo1.jpg", name: "👘 Ethnic Wear - Sharara Suit" },
+    { url: "images/photo2.jpeg", name: "👗 Frock" },
+    { url: "images/photo3.jpeg", name: "👰‍♀️ Bridal Wear" },
+    { url: "images/photo4.jpeg", name: "🌸 Anarkali" },
+    { url: "images/photo5.jpeg", name: "👚 Short Top" },
+    { url: "images/photo6.jpeg", name: "✨ Crop Top" },
+    { url: "images/photo7.jpeg", name: "👚 Blouse" },
+    { url: "images/photo8.jpeg", name: "🪭 Ethnic Gown" },
+    { url: "images/photo9.jpeg", name: "⭐ Modern Frock" },
+    { url: "images/photo10.jpeg", name: "💎 Embroidery Blouse" },
+    { url: "images/photo11.jpeg", name: "🌸 Short Kurti" },
+    { url: "images/photo12.jpeg", name: "👘 Indo Western" },
+    { url: "images/photo13.jpeg", name: "🧶 Modern Blouse" },
+    { url: "images/photo14.jpeg", name: "✨ Ethnic Crop Top" },
+    { url: "images/photo15.jpeg", name: "🎀 Kurta Set" },
+    { url: "images/photo16.jpeg", name: "💎 Bridal Lehenga" },
+    { url: "images/photo17.jpeg", name: "🌸 Floral Top" },
+    { url: "images/photo18.jpeg", name: "🧣 Anarkali Gown" },
+    { url: "images/photo19.jpeg", name: "👓 Draped Silk Gown" },
+    { url: "images/photo20.jpeg", name: "🧶 Cotton Kurti" },
+    { url: "images/photo21.jpeg", name: "👗 Embroidered Gown" },
+    { url: "images/photo22.jpeg", name: "🪭 Kurti with Palazzo Pants" }
+];
+    // Admin credentials (for frontend validation)
+    const ADMIN_EMAIL = "admin@svsboutique.com";
+    const ADMIN_PASSWORD = "admin123";
+
+    function showPage(pageName) {
+        const pages = ['home', 'dresses', 'samplephotos', 'order', 'adminlogin', 'adminpanel'];
+        pages.forEach(page => {
+            const el = document.getElementById(page + 'Page');
+            if (el) el.classList.remove('active');
+        });
+        document.getElementById(pageName + 'Page').classList.add('active');
+        window.scrollTo(0, 0);
+        
+        if (pageName === 'adminpanel') {
+            if (sessionStorage.getItem('admin_logged_in') !== 'true') {
+                showPage('adminlogin');
+                return;
+            }
+            loadAdminOrders();
+        }
+    }
+
+    function loadSamplePhotos() {
+        const grid = document.getElementById('samplePhotosGrid');
+        if(grid) {
+            grid.innerHTML = samplePhotos.map(photo => `
+                <div class="sample-img" style="background-image: url('${photo.url}'); background-size: cover; background-position: center;" onclick='enlargeImage("${photo.url}")'>
+                    <div class="img-caption">${photo.name}</div>
+                </div>
+            `).join('');
+        }
+    }
+
+    function enlargeImage(url) {
+        document.getElementById('enlargedImage').src = url;
+        document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeImageModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+
+    function getSelectedOutfits() {
+        const checkboxes = document.querySelectorAll('#orderPage .checkbox-grid input[type="checkbox"]');
+        const selected = [];
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                selected.push(cb.value);
+            }
+        });
+        return selected;
+    }
+
+    // Place Order - Save to MongoDB Atlas
+    document.getElementById('orderForm')?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const selectedOutfits = getSelectedOutfits();
+        
+        const orderData = {
+            name: document.getElementById('orderName').value,
+            email: document.getElementById('orderEmail').value,
+            phone: document.getElementById('orderPhone').value,
+            items: selectedOutfits,
+            description: document.getElementById('orderDescription').value,
+            deliveryDate: document.getElementById('deliveryDate').value
+        };
+        
+        if (!orderData.name || !orderData.email || !orderData.phone || selectedOutfits.length === 0 || !orderData.deliveryDate) {
+            showMessage('orderMessage', 'Please fill all required fields and select at least one outfit type', 'error');
+            return;
+        }
+        
+        const submitBtn = document.querySelector('#orderForm .submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Placing Order...';
+        
+        try {
+            const response = await fetch(`${API_URL}/api/orders/create`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(orderData)
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                showMessage('orderMessage', `✅ ${data.message} Order ID: ${data.orderId}`, 'success');
+                document.getElementById('orderForm').reset();
+                document.querySelectorAll('#orderPage .checkbox-grid input[type="checkbox"]').forEach(cb => cb.checked = false);
+                
+                setTimeout(() => {
+                    document.getElementById('orderMessage').style.display = 'none';
+                    showPage('home');
+                }, 3000);
+            } else {
+                showMessage('orderMessage', '❌ ' + data.message, 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('orderMessage', '❌ Unable to connect to server. Please make sure backend is running on port 5000', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = '📝 Place Order';
+        }
+    });
+
+    // Admin Login
+    document.getElementById('loginForm')?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('adminEmail').value;
+        const password = document.getElementById('adminPassword').value;
+        
+        const submitBtn = document.querySelector('#loginForm .submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Logging in...';
+        
+        try {
+            const response = await fetch(`${API_URL}/api/orders/admin-login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password })
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                sessionStorage.setItem('admin_logged_in', 'true');
+                showMessage('loginMessage', '✅ Login successful!', 'success');
+                await loadAdminOrders();
+                setTimeout(() => showPage('adminpanel'), 1000);
+            } else {
+                showMessage('loginMessage', '❌ Invalid email or password', 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('loginMessage', '❌ Unable to connect to server. Make sure backend is running on port 5000', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = '🔐 Login';
+        }
+    });
+
+    async function loadAdminOrders() {
+        if (sessionStorage.getItem('admin_logged_in') !== 'true') {
+            return;
+        }
+        
+        try {
+            const response = await fetch(`${API_URL}/api/orders/all`);
+            const data = await response.json();
+            
+            if (data.success) {
+                displayOrders(data.orders);
+            } else {
+                console.error('Failed to load orders');
+            }
+        } catch (error) {
+            console.error('Error loading orders:', error);
+            document.getElementById('allOrdersList').innerHTML = '<p style="text-align:center; color:#999;">⚠️ Failed to load orders. Make sure backend is running on port 5000</p>';
+            document.getElementById('pendingOrdersList').innerHTML = '<p style="text-align:center; color:#999;">⚠️ Backend not connected</p>';
+            document.getElementById('deliveredOrdersList').innerHTML = '<p style="text-align:center; color:#999;">⚠️ Backend not connected</p>';
+        }
+    }
+
+    function displayOrders(orders) {
+        const allOrders = orders.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        const pendingOrders = orders.filter(o => o.status === 'pending');
+        const deliveredOrders = orders.filter(o => o.status === 'delivered');
+        
+        document.getElementById('allCount').innerText = allOrders.length;
+        document.getElementById('pendingCount').innerText = pendingOrders.length;
+        document.getElementById('deliveredCount').innerText = deliveredOrders.length;
+        
+        const allHtml = allOrders.map(order => `
+            <div class="order-item">
+                <p><strong>🆔 ${order.orderId}</strong></p>
+                <p><strong>👤 ${order.name}</strong></p>
+                <p>📞 ${order.phone}</p>
+                <p>✉️ ${order.email}</p>
+                <p>👗 Items: ${order.items.join(', ')}</p>
+                <p>📝 ${order.description || 'No description'}</p>
+                <p>📅 Order Date: ${order.orderDate}</p>
+                <p>📦 Delivery by: ${order.deliveryDate}</p>
+                <p>📌 Status: ${order.status === 'pending' ? '⏳ Pending' : '✅ Delivered'}</p>
+                ${order.status === 'pending' ? `<button class="deliver-btn" onclick="markDelivered('${order._id}')">✅ Mark as Delivered</button>` : ''}
+            </div>
+        `).join('');
+        
+        const pendingHtml = pendingOrders.map(order => `
+            <div class="order-item">
+                <p><strong>🆔 ${order.orderId}</strong></p>
+                <p><strong>👤 ${order.name}</strong></p>
+                <p>📞 ${order.phone}</p>
+                <p>✉️ ${order.email}</p>
+                <p>👗 Items: ${order.items.join(', ')}</p>
+                <p>📝 ${order.description || 'No description'}</p>
+                <p>📅 Order Date: ${order.orderDate}</p>
+                <p>📦 Delivery by: ${order.deliveryDate}</p>
+                <button class="deliver-btn" onclick="markDelivered('${order._id}')">✅ Mark as Delivered</button>
+            </div>
+        `).join('');
+        
+        const deliveredHtml = deliveredOrders.map(order => `
+            <div class="order-item">
+                <p><strong>🆔 ${order.orderId}</strong></p>
+                <p><strong>👤 ${order.name}</strong></p>
+                <p>📞 ${order.phone}</p>
+                <p>👗 Items: ${order.items.join(', ')}</p>
+                <p>📝 ${order.description || 'No description'}</p>
+                <p>📅 Order Date: ${order.orderDate}</p>
+                <p>📦 Delivery Date: ${order.deliveryDate}</p>
+                <p>✅ Delivered</p>
+            </div>
+        `).join('');
+        
+        document.getElementById('allOrdersList').innerHTML = allHtml || '<p style="text-align:center; color:#999;">No orders found</p>';
+        document.getElementById('pendingOrdersList').innerHTML = pendingHtml || '<p style="text-align:center; color:#999;">No pending orders</p>';
+        document.getElementById('deliveredOrdersList').innerHTML = deliveredHtml || '<p style="text-align:center; color:#999;">No delivered orders</p>';
+    }
+
+    async function markDelivered(orderId) {
+        try {
+            const response = await fetch(`${API_URL}/api/orders/deliver/${orderId}`, {
+                method: 'PUT'
+            });
+            const data = await response.json();
+            
+            if (data.success) {
+                await loadAdminOrders();
+                showMessage('orderMessage', '✅ Order marked as delivered!', 'success');
+            } else {
+                alert('Failed to mark as delivered');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Server error. Make sure backend is running.');
+        }
+    }
+
+    function adminLogout() {
+        sessionStorage.removeItem('admin_logged_in');
+        showPage('home');
+    }
+
+    function showMessage(elementId, message, type) {
+        const el = document.getElementById(elementId);
+        el.textContent = message;
+        el.className = `form-message ${type}`;
+        el.style.display = 'block';
+        setTimeout(() => {
+            el.style.display = 'none';
+        }, 4000);
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape') closeImageModal();
+    });
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('imageModal');
+        if(event.target === modal) closeImageModal();
+    }
+
+    loadSamplePhotos();
+</script>
+</body>
+</html>
